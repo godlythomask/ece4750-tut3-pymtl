@@ -25,6 +25,9 @@ class RegIncr2stage( Model ):
 
     s.connect( s.in_, s.reg_incr_0.in_ )
 
+    s.reg_incr_1 = RegIncr()
+    s.connect(s.reg_incr_0.out,s.reg_incr_1.in_)
+    s.connect(s.reg_incr_1.out,s.out)
     # ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''
     # This model is incomplete. As part of the tutorial you will insert
     # code here to instantiate and then connect the second stage of this
