@@ -29,7 +29,7 @@ class RegIncr( Model ):
       else:
         s.reg_out.next = s.in_
     
-    @s.combinatorial
+    @s.combinational
     def block2():
       s.out.value = s.reg_out + 1
 
